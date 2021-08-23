@@ -8,7 +8,7 @@ import './App.css'
  * @type {React.FC}
  */
 
-const header = <h1>Dogアプリ</h1>;
+const header = <header>Dogアプリ</header>;
 
 export const App = () => {
   return (
