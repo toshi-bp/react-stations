@@ -1,7 +1,6 @@
 // DO NOT DELETE
 
 import * as React from 'react'
-//import React, { useState } from 'react'
 import './App.css'
 
 /**
@@ -9,7 +8,11 @@ import './App.css'
  * @type {React.FC}
  */
 
-const header = <header>Dogアプリ</header>;
+const header = (
+                <header className="header">
+                  <h1 className="header__title">Dogアプリ</h1>
+                </header>
+               );
 const description = <p>犬の画像を表示するサイトです</p>;
 
 function DogImage() {
@@ -28,9 +31,9 @@ function DogImage() {
 
   return (
     <div>
-      <img src={dogUrl} />
+      <img src={dogUrl} className="img"/>
       <p>This is a dog.</p>
-      <button onClick={() => componentDidMount()}>
+      <button onClick={() => componentDidMount()} className="button">
         change a dog
       </button>
     </div>
