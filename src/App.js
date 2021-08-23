@@ -7,10 +7,13 @@ import './App.css'
  * 
  * @type {React.FC}
  */
+
+const header = <h1>Dogアプリ</h1>;
+
 export const App = () => {
   return (
     <div>
-      <h2>Hello, world!</h2>
+      {header}
     </div>
   )
 }
