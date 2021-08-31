@@ -4,7 +4,7 @@ import * as React from 'react'
 import './App.css'
 
 export function DogImage(props) {
-    const [dogUrl, setDogUrl] = React.useState('https://images.dog.ceo/breeds/greyhound-italian/n02091032_1121.jpg')
+    const [dogUrl, setDogUrl] = React.useState('https://avatars.githubusercontent.com/u/298748')
 
     function componentDidMount() {
         fetch(props.url)
