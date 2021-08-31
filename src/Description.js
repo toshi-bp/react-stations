@@ -4,13 +4,11 @@ import * as React from 'react'
 import './App.css'
 import { DogImage } from './DogImage'
 
-function Description() {
+export function Description() {
     return (
         <div>
             <p>犬の画像を表示するサイトです</p>
             <DogImage url="https://dog.ceo/api/breeds/image/random" />
         </div>
     );
-}
-
-export function Description() { Description };
+};

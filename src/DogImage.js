@@ -3,7 +3,7 @@
 import * as React from 'react'
 import './App.css'
 
-function DogImage(props) {
+export function DogImage(props) {
     const [dogUrl, setDogUrl] = React.useState('https://images.dog.ceo/breeds/greyhound-italian/n02091032_1121.jpg')
 
     function componentDidMount() {
@@ -25,6 +25,4 @@ function DogImage(props) {
             </button>
         </div>
     )
-}
-
-export function DogImage() { DogImage };
+};
