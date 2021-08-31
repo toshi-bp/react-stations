@@ -2,7 +2,7 @@
 
 import * as React from 'react'
 import './App.css'
-import DogImage from './DogImage'
+import { DogImage } from './DogImage'
 
 function Description() {
     return (
@@ -13,4 +13,4 @@ function Description() {
     );
 }
 
-export default Description;
+export function Description() { Description };

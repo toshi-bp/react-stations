@@ -27,4 +27,4 @@ function DogImage(props) {
     )
 }
 
-export default DogImage;
+export function DogImage() { DogImage };
