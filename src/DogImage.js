@@ -7,7 +7,7 @@ function DogImage(props) {
     const [dogUrl, setDogUrl] = React.useState('https://images.dog.ceo/breeds/greyhound-italian/n02091032_1121.jpg')
 
     function componentDidMount() {
-        fetch(props.API_URL)
+        fetch(props.url)
             .then(res => res.json())
             .then(
                 (result) => {

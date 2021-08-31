@@ -16,7 +16,6 @@ export const App = () => {
     <div>
       <Header />
       <Description />
-      <DogImage API_URL="https://dog.ceo/api/breeds/image/random" />
     </div>
   )
 }
