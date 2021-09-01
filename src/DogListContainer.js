@@ -12,9 +12,9 @@ export const DogListContainer = () => {
             .then(
                 (result) => {
                     setBreeds(Object.keys(result.message))
-                },[]
+                }
             )
-    })
+    }, [])
 
     return (
         <div></div>
