@@ -5,6 +5,7 @@ import './App.css'
 export const DogListContainer = () => {
     const API_URL = "https://dog.ceo/api/breeds/list/all"
     const [breeds, setBreeds] = React.useState([])
+    const [selectBreed, setSelectBreed] = React.useState([])
 
     useEffect(() => {
         fetch(API_URL)
