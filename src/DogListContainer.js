@@ -3,15 +3,16 @@ import React, { useEffect } from 'react'
 import './App.css'
 
 export function DogListContainer(props) {
-    const [breeds, setBreeds] = React.useState()
+    const API_URL = "https://dog.ceo/api/breeds/list/all"
+    const [breeds, setBreeds] = React.useState([])
 
     useEffect(() => {
-        breeds = fetch(props.url)
+        fetch(API_URL)
             .then(res => res.json())
             .then(
                 (result) => {
-                    result.message
-                }
+                    setBreeds(Object.keys(result.message))
+                },[]
             )
     })
 

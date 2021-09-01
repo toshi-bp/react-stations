@@ -11,14 +11,12 @@ import { DogListContainer } from './DogListContainer';
  * @type {React.FC}
  */
 
-const API_URL = "https://dog.ceo/api/breeds/list/all"
-
 export const App = () => {
   return (
     <div>
       <Header />
       <Description />
-      <DogListContainer url={API_URL}/>
+      <DogListContainer />
     </div>
   )
 }
