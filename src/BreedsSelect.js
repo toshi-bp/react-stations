@@ -4,17 +4,32 @@ import './App.css';
 
 export function BreedsSelect(props) {
     const breeds = props.breeds;
+    const imageList = props.imageList
+
     const breedItems = breeds.map((breed) =>
         <option value={breed}>{breed}</option>
     )
-    return (
+
+    const images = imageList.map((image) =>
         <div>
-            <select
-                value={props.value}
-                onChange={props.handleChange}
-            >
-                {breedItems}
-            </select>
+            <img src={image} alt="image"/>
+        </div>
+    )
+
+    return (
+        <div className="select">
+            <div>
+                <select
+                    value={props.value}
+                    onChange={props.handleChange}
+                >
+                    {breedItems}
+                </select>
+            </div>
+            <div>
+                <button onClick={props.onClick}>表示</button>
+            </div>
+            {images}
         </div>
     )
 }
