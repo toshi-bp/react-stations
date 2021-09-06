@@ -26,7 +26,7 @@ export const DogListContainer = () => {
     return (
         <div>
             <BreedsSelect
-                breeds={Object.keys(breeds)}
+                breeds={breeds}
                 value={selectedBreed}
                 handleChange={handleChange}
             />

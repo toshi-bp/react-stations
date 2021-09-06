@@ -9,7 +9,10 @@ export function BreedsSelect(props) {
     )
     return (
         <div>
-            <select onChange={props.handleChange}>
+            <select
+                value={props.value}
+                onChange={props.handleChange}
+            >
                 {breedItems}
             </select>
         </div>
