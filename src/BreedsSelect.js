@@ -2,8 +2,16 @@
 import * as React from 'react';
 import './App.css';
 
-export function BreedsSelect(params) {
+export function BreedsSelect(props) {
+    const breeds = props.breeds;
+    const breedItems = breeds.map((breed) =>
+        <option value={breed}>{breed}</option>
+    )
     return (
-        <div></div>
+        <div>
+            <select onChange={props.handleChange}>
+                {breedItems}
+            </select>
+        </div>
     )
 }

@@ -1,11 +1,17 @@
 // DO NOT DELETE
 import React, { useEffect } from 'react'
+
+import { BreedsSelect } from './BreedsSelect';
 import './App.css'
 
 export const DogListContainer = () => {
     const API_URL = "https://dog.ceo/api/breeds/list/all"
     const [breeds, setBreeds] = React.useState([])
-    const [selectBreed, setSelectBreed] = React.useState([])
+    const [selectedBreed, setSelectedBreed] = React.useState([])
+
+    const handleChange = (event) => {
+        setSelectedBreed(event.target.value)
+    }
 
     useEffect(() => {
         fetch(API_URL)
@@ -18,6 +24,12 @@ export const DogListContainer = () => {
     }, [])
 
     return (
-        <div></div>
+        <div>
+            <BreedsSelect
+                breeds={Object.keys(breeds)}
+                value={selectedBreed}
+                handleChange={handleChange}
+            />
+        </div>
     )
 };
