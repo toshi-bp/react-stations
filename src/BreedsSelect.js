@@ -11,25 +11,29 @@ export function BreedsSelect(props) {
     )
 
     const images = imageList.map((image) =>
-        <div>
-            <img src={image} alt="image"/>
+        <div className="dog-img-parent">
+            <img src={image} alt="image" className="dog-img"/>
         </div>
     )
 
     return (
-        <div className="select">
-            <div>
-                <select
-                    value={props.value}
-                    onChange={props.handleChange}
-                >
-                    {breedItems}
-                </select>
+        <div>
+            <div className="form">
+                <div className="the-form">
+                    <select
+                        value={props.value}
+                        onChange={props.handleChange}
+                    >
+                        {breedItems}
+                    </select>
+                </div>
+                <div>
+                    <button onClick={props.onClick} className="button">表示</button>
+                </div>
             </div>
-            <div>
-                <button onClick={props.onClick}>表示</button>
+            <div className="imgs">
+                {images}
             </div>
-            {images}
         </div>
     )
 }

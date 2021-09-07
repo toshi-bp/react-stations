@@ -25,6 +25,7 @@ export const DogListContainer = () => {
                 }
             )
     }
+    console.log(imageList)
 
     useEffect(() => {
         fetch(API_URL)

@@ -49,3 +49,24 @@
     max-width: 100%;
     height: auto;
 }
+
+.form {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+   
+.the-form{
+    margin-right: 1rem;
+}
+
+.dog-img-parent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.imgs {
+    width: 100%;
+}
